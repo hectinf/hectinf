@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Página Secreta</title>
+    <link rel="stylesheet" href="FDD.css"> <!-- Incluye el archivo CSS externo -->
+</head>
+<body>
+    <h1>Bienvenido a Mi Página Secreta</h1>
+    <p>Descifra el mensaje:</p>
+    <button onclick="mostrarMensaje()">Ver Mensaje</button> <!-- Botón con funcionalidad -->
+    <p id="mensaje"></p> <!-- Aquí se mostrará el mensaje decodificado -->
+    <div id="flores" class="hidden">
+        <div class="flower">
+            <div class="petal petal1"></div>
+            <div class="petal petal2"></div>
+            <div class="petal petal3"></div>
+            <div class="petal petal4"></div>
+            <div class="center"></div>
+        </div>
+    </div>
+
+    <script>
+        function mostrarMensaje() {
+            let mensajeBinario = "01110100 01100101 00100000 01100001 01101101 01101111";  // "te amo" en binario
+            document.getElementById('mensaje').innerText = mensajeBinario; // Muestra el mensaje en binario
+            let flores = document.getElementById('flores');
+            flores.classList.remove('hidden'); // Muestra las flores
+        }
+    </script>
+</body>
+</html>
